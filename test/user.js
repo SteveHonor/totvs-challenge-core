@@ -23,8 +23,6 @@ describe('User', () => {
       'name': 'Dev Totvs',
       'email': 'dev@totvs.com.br',
       'password': '123123'
-    }, () => {
-      done();
     })
 
     chai.request(server)
@@ -34,11 +32,10 @@ describe('User', () => {
       password: '123123'
     })
     .end((err, res) => {
-      console.log(res.body);
       res.should.have.status(200);
       res.body.should.be.a('object');
-      res.body.users.docs.length.should.be.eql(1);
+      res.body.user.name.should.be.eql('Dev Totvs');
       done();
-    });
-  });
-});
+    })
+  })
+})
