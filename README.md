@@ -5,6 +5,7 @@
 ## Project setup
 ```
 docker-compose build
+docker-compose run api npm install
 ```
 
 ### run
@@ -15,5 +16,5 @@ docker-compose build
 
 ### Tests
 ```
-npm run build
+docker-compose run api npm test
 ```
