@@ -1,6 +1,29 @@
 const defaultingModel = require('../models/defaulting');
 
 module.exports = {
+  /**
+  * @swagger
+  * path: /defaultings
+  * operations:
+  *   -  httpMethod: GET
+  *      summary: Defaulter clients
+  *      notes: Returns a user based on username
+  *      responseClass: Defaulting
+  *      nickname: Defaulter
+  *      consumes:
+  *        - application/json
+  *      parameters:
+  *        - name: page
+  *          description: Your username
+  *          paramType: query
+  *          required: true
+  *          dataType: string
+  *        - name: per_oage
+  *          description: Your password
+  *          paramType: query
+  *          required: true
+  *          dataType: string
+  */
   get: (req, res, next) => {
     defaultingModel.paginate(
       {

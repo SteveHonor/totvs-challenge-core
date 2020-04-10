@@ -1,6 +1,22 @@
 # Totvs Challenge Core
 
 ## NODE - Express
+#### Technologies
+
+ - Node
+ - Express
+ - Mongo
+ - Mongoose
+ - CORS
+ - JWT
+ - SWAGGER
+ - Mocha
+ - Chai
+
+**Swagger:**
+```
+http://localhost:3000/swagger.json
+```
 
 ## Project setup
 ```
